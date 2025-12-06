@@ -1,108 +1,138 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Algoritmos_Graficacion
 {
     public partial class FormBresenham : Form
     {
-        private readonly CBresenham _bres = new CBresenham();
-
         public FormBresenham()
         {
             InitializeComponent();
-
             btnDraw.Click += BtnDraw_Click;
             btnClear.Click += BtnClear_Click;
             btnSalir.Click += BtnSalir_Click;
         }
 
-        // El handler del botón únicamente llama a la función que realiza el trabajo.
-        private void BtnDraw_Click(object? sender, EventArgs e) => DrawScaledLine();
-
-        private void BtnClear_Click(object? sender, EventArgs e)
+        private async void BtnDraw_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Image is Image old)
-            {
-                pictureBox1.Image = null;
-                old.Dispose();
-            }
-
-            txtX1.Text = string.Empty;
-            txtY0.Text = string.Empty;
-            txtX0.Text = string.Empty;
-            txtY1.Text = string.Empty;
-
-            btnSalir.Visible = false;
+            // Bloquear botón para evitar múltiples clics durante animación
+            btnDraw.Enabled = false;
+            await EjecutarDibujoAnimado();
+            btnDraw.Enabled = true;
         }
 
-        private void BtnSalir_Click(object? sender, EventArgs e)
+        private void BtnClear_Click(object sender, EventArgs e)
         {
-            _bres.CloseForm(this);
+            if (pictureBox1.Image != null) pictureBox1.Image.Dispose();
+            pictureBox1.Image = null;
+            // Limpiar textboxes
+            txtX1.Clear(); txtY0.Clear(); txtX0.Clear(); txtY1.Clear();
         }
 
-        // Parsea, escala matemáticamente y llama al algoritmo de Bresenham.
-        private void DrawScaledLine()
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-            bool okX1 = int.TryParse(txtX1.Text.Trim(), out int x1);
-            bool okY1 = int.TryParse(txtY0.Text.Trim(), out int y1);
-            bool okX2 = int.TryParse(txtX0.Text.Trim(), out int x2);
-            bool okY2 = int.TryParse(txtY1.Text.Trim(), out int y2);
+            this.Close();
+        }
 
-            if (!okX1 || !okY1 || !okX2 || !okY2)
+        private async Task EjecutarDibujoAnimado()
+        {
+            // 1. Validar entradas
+            if (!int.TryParse(txtX1.Text, out int x1) || !int.TryParse(txtY0.Text, out int y1) ||
+                !int.TryParse(txtX0.Text, out int x2) || !int.TryParse(txtY1.Text, out int y2))
             {
-                MessageBox.Show("Introduce valores enteros válidos en X1, Y1, X2, Y2.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor ingrese coordenadas válidas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int w = Math.Max(1, pictureBox1.Width);
-            int h = Math.Max(1, pictureBox1.Height);
+            // 2. Configuración Visual
+            int pixelSize = (int)numPixelSize.Value; // Tamaño visual del píxel
+            int delay = (int)numSpeed.Value;         // Retraso en ms
+            bool showGrid = chkGrid.Checked;
 
-            if (pictureBox1.Image is Image prev) { pictureBox1.Image = null; prev.Dispose(); }
+            int w = pictureBox1.Width;
+            int h = pictureBox1.Height;
+
+            // Calcular cuántos "píxeles lógicos" caben en la pantalla
+            int gridW = w / pixelSize;
+            int gridH = h / pixelSize;
 
             Bitmap bmp = new Bitmap(w, h);
+            pictureBox1.Image = bmp;
+
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                g.Clear(pictureBox1.BackColor);
+                g.Clear(Color.Black);
 
-                Point p0 = new Point(x1, y1);
-                Point p1 = new Point(x2, y2);
+                // --- DIBUJAR CUADRÍCULA ---
+                if (showGrid)
+                {
+                    using (Pen gridPen = new Pen(Color.FromArgb(40, 40, 40)))
+                    {
+                        // Líneas Verticales
+                        for (int i = 0; i <= w; i += pixelSize)
+                            g.DrawLine(gridPen, i, 0, i, h);
+                        // Líneas Horizontales
+                        for (int j = 0; j <= h; j += pixelSize)
+                            g.DrawLine(gridPen, 0, j, w, j);
+                    }
+                }
 
-                int minX = Math.Min(p0.X, p1.X);
-                int maxX = Math.Max(p0.X, p1.X);
-                int minY = Math.Min(p0.Y, p1.Y);
-                int maxY = Math.Max(p0.Y, p1.Y);
+                // Refrescar para mostrar el grid base
+                pictureBox1.Refresh();
 
-                float rangeW = Math.Max(1, maxX - minX);
-                float rangeH = Math.Max(1, maxY - minY);
+                // --- ALGORITMO BRESENHAM (Lógica + Animación) ---
 
-                const float margin = 10f;
-                float availW = Math.Max(1f, w - 2 * margin);
-                float availH = Math.Max(1f, h - 2 * margin);
+                // Mapear coordenadas lógicas (grid)
+                // Nota: Si el usuario pone coordenadas mayores al grid, las ajustamos o dibujamos fuera
+                // Aquí asumimos que el usuario ingresa coordenadas lógicas (ej: 0,0 a 20,15)
 
-                float scaleX = availW / rangeW;
-                float scaleY = availH / rangeH;
-                float scale = Math.Min(scaleX, scaleY);
+                int x0 = x1;
+                int y0 = y1;
+                int xEnd = x2;
+                int yEnd = y2;
 
-                float usedW = rangeW * scale;
-                float usedH = rangeH * scale;
-                float offsetX = margin + (availW - usedW) / 2f;
-                float offsetY = margin + (availH - usedH) / 2f;
+                int dx = Math.Abs(xEnd - x0);
+                int dy = Math.Abs(yEnd - y0);
+                int sx = (x0 < xEnd) ? 1 : -1;
+                int sy = (y0 < yEnd) ? 1 : -1;
+                int err = dx - dy;
 
-                Point tp0 = new Point(
-                    (int)Math.Round((p0.X - minX) * scale + offsetX),
-                    (int)Math.Round((p0.Y - minY) * scale + offsetY)
-                );
+                using (Brush brush = new SolidBrush(Color.Cyan))
+                {
+                    while (true)
+                    {
+                        // DIBUJAR PÍXEL VISUAL (Rectángulo relleno)
+                        // Validar límites visuales
+                        if (x0 >= 0 && x0 < gridW && y0 >= 0 && y0 < gridH)
+                        {
+                            g.FillRectangle(brush, x0 * pixelSize + 1, y0 * pixelSize + 1, pixelSize - 1, pixelSize - 1);
 
-                Point tp1 = new Point(
-                    (int)Math.Round((p1.X - minX) * scale + offsetX),
-                    (int)Math.Round((p1.Y - minY) * scale + offsetY)
-                );
+                            // Forzar repintado del PictureBox para ver la animación
+                            pictureBox1.Invalidate();
+                            pictureBox1.Update(); // Update inmediato
+                        }
 
-                _bres.DrawLineBresenham(g, tp0, tp1, Color.Black);
+                        if (x0 == xEnd && y0 == yEnd) break;
+
+                        int e2 = 2 * err;
+                        if (e2 > -dy)
+                        {
+                            err -= dy;
+                            x0 += sx;
+                        }
+                        if (e2 < dx)
+                        {
+                            err += dx;
+                            y0 += sy;
+                        }
+
+                        // RETRASO PARA ANIMACIÓN
+                        if (delay > 0) await Task.Delay(delay);
+                    }
+                }
             }
-
-            pictureBox1.Image = bmp;
         }
     }
 }
