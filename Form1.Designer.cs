@@ -37,12 +37,18 @@
             octantesToolStripMenuItem = new ToolStripMenuItem();
             bresenhamToolStripMenuItem1 = new ToolStripMenuItem();
             parametricoToolStripMenuItem = new ToolStripMenuItem();
+            recorteDeLinasToolStripMenuItem = new ToolStripMenuItem();
+            cohenShuterlandToolStripMenuItem = new ToolStripMenuItem();
+            puntoMedioToolStripMenuItem = new ToolStripMenuItem();
+            liangBarskyToolStripMenuItem = new ToolStripMenuItem();
+            poligonosToolStripMenuItem = new ToolStripMenuItem();
+            shuterlandHodgmanToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { lineasToolStripMenuItem, circulosToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { lineasToolStripMenuItem, circulosToolStripMenuItem, recorteDeLinasToolStripMenuItem, poligonosToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -87,23 +93,65 @@
             // octantesToolStripMenuItem
             // 
             octantesToolStripMenuItem.Name = "octantesToolStripMenuItem";
-            octantesToolStripMenuItem.Size = new Size(180, 22);
+            octantesToolStripMenuItem.Size = new Size(143, 22);
             octantesToolStripMenuItem.Text = "Punto Medio";
             octantesToolStripMenuItem.Click += octantesToolStripMenuItem_Click;
             // 
             // bresenhamToolStripMenuItem1
             // 
             bresenhamToolStripMenuItem1.Name = "bresenhamToolStripMenuItem1";
-            bresenhamToolStripMenuItem1.Size = new Size(180, 22);
+            bresenhamToolStripMenuItem1.Size = new Size(143, 22);
             bresenhamToolStripMenuItem1.Text = "Bresenham";
             bresenhamToolStripMenuItem1.Click += bresenhamToolStripMenuItem1_Click;
             // 
             // parametricoToolStripMenuItem
             // 
             parametricoToolStripMenuItem.Name = "parametricoToolStripMenuItem";
-            parametricoToolStripMenuItem.Size = new Size(180, 22);
+            parametricoToolStripMenuItem.Size = new Size(143, 22);
             parametricoToolStripMenuItem.Text = "Paramétrico";
             parametricoToolStripMenuItem.Click += parametricoToolStripMenuItem_Click;
+            // 
+            // recorteDeLinasToolStripMenuItem
+            // 
+            recorteDeLinasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cohenShuterlandToolStripMenuItem, puntoMedioToolStripMenuItem, liangBarskyToolStripMenuItem });
+            recorteDeLinasToolStripMenuItem.Name = "recorteDeLinasToolStripMenuItem";
+            recorteDeLinasToolStripMenuItem.Size = new Size(108, 20);
+            recorteDeLinasToolStripMenuItem.Text = "Recorte de líneas";
+            // 
+            // cohenShuterlandToolStripMenuItem
+            // 
+            cohenShuterlandToolStripMenuItem.Name = "cohenShuterlandToolStripMenuItem";
+            cohenShuterlandToolStripMenuItem.Size = new Size(171, 22);
+            cohenShuterlandToolStripMenuItem.Text = "Cohen-Shuterland";
+            cohenShuterlandToolStripMenuItem.Click += cohenShuterlandToolStripMenuItem_Click;
+            // 
+            // puntoMedioToolStripMenuItem
+            // 
+            puntoMedioToolStripMenuItem.Name = "puntoMedioToolStripMenuItem";
+            puntoMedioToolStripMenuItem.Size = new Size(171, 22);
+            puntoMedioToolStripMenuItem.Text = "Punto Medio";
+            puntoMedioToolStripMenuItem.Click += puntoMedioToolStripMenuItem_Click;
+            // 
+            // liangBarskyToolStripMenuItem
+            // 
+            liangBarskyToolStripMenuItem.Name = "liangBarskyToolStripMenuItem";
+            liangBarskyToolStripMenuItem.Size = new Size(171, 22);
+            liangBarskyToolStripMenuItem.Text = "Liang Barsky";
+            liangBarskyToolStripMenuItem.Click += liangBarskyToolStripMenuItem_Click;
+            // 
+            // poligonosToolStripMenuItem
+            // 
+            poligonosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { shuterlandHodgmanToolStripMenuItem });
+            poligonosToolStripMenuItem.Name = "poligonosToolStripMenuItem";
+            poligonosToolStripMenuItem.Size = new Size(72, 20);
+            poligonosToolStripMenuItem.Text = "Poligonos";
+            // 
+            // shuterlandHodgmanToolStripMenuItem
+            // 
+            shuterlandHodgmanToolStripMenuItem.Name = "shuterlandHodgmanToolStripMenuItem";
+            shuterlandHodgmanToolStripMenuItem.Size = new Size(188, 22);
+            shuterlandHodgmanToolStripMenuItem.Text = "Shuterland Hodgman";
+            shuterlandHodgmanToolStripMenuItem.Click += shuterlandHodgmanToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -132,5 +180,11 @@
         private ToolStripMenuItem octantesToolStripMenuItem;
         private ToolStripMenuItem bresenhamToolStripMenuItem1;
         private ToolStripMenuItem parametricoToolStripMenuItem;
+        private ToolStripMenuItem recorteDeLinasToolStripMenuItem;
+        private ToolStripMenuItem cohenShuterlandToolStripMenuItem;
+        private ToolStripMenuItem puntoMedioToolStripMenuItem;
+        private ToolStripMenuItem liangBarskyToolStripMenuItem;
+        private ToolStripMenuItem poligonosToolStripMenuItem;
+        private ToolStripMenuItem shuterlandHodgmanToolStripMenuItem;
     }
 }

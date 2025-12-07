@@ -43,5 +43,29 @@ namespace Algoritmos_Graficacion
             FormParametrico formParametrico = new FormParametrico();
             formParametrico.Show();
         }
+
+        private void cohenShuterlandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCohenSutherland formCohenSutherland = new FormCohenSutherland();
+            formCohenSutherland.Show();
+        }
+
+        private void puntoMedioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPuntoMedioRecorte formPuntoMedioRecorte = new FormPuntoMedioRecorte();
+            formPuntoMedioRecorte.Show();
+        }
+
+        private void liangBarskyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLiangBarsky formLiangBarsky = new FormLiangBarsky();
+            formLiangBarsky.Show();
+        }
+
+        private void shuterlandHodgmanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSutherlandHodgman formSutherlandHodgman = new FormSutherlandHodgman();
+            formSutherlandHodgman.Show();
+        }
     }
 }

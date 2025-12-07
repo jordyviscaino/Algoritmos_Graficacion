@@ -1,90 +1,93 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Algoritmos_Graficacion
 {
     public partial class FormParametrico : Form
     {
-        private readonly CParametrico _param = new CParametrico();
+        private readonly CCirculoParametrico _algoritmo = new CCirculoParametrico();
 
         public FormParametrico()
         {
             InitializeComponent();
+            this.Text = "Círculo Paramétrico (Sin Octantes)";
+            chkOctantes.Enabled = false; // Deshabilitar octantes porque este algoritmo no los usa
+            chkOctantes.Text = "No aplica Octantes";
 
             btnDraw.Click += BtnDraw_Click;
             btnClear.Click += BtnClear_Click;
             btnSalir.Click += BtnSalir_Click;
         }
 
-        // El handler del botón sólo llama a la función que realiza el trabajo.
-        private void BtnDraw_Click(object? sender, EventArgs e) => DrawCircleNoScale();
-
-        private void BtnClear_Click(object? sender, EventArgs e)
+        private async void BtnDraw_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Image is Image old)
-            {
-                pictureBox1.Image = null;
-                old.Dispose();
-            }
-
-            // Asumo que en este formulario el TextBox del radio se llama txtRadio (consistente con otros).
-            txtRadio.Text = string.Empty;
-
-            btnSalir.Visible = false;
+            btnDraw.Enabled = false;
+            await EjecutarAnimacion();
+            btnDraw.Enabled = true;
         }
 
-        private void BtnSalir_Click(object? sender, EventArgs e)
+        private void BtnClear_Click(object sender, EventArgs e)
         {
-            _param.CloseForm(this);
+            if (pictureBox1.Image != null) pictureBox1.Image.Dispose();
+            pictureBox1.Image = null;
+            txtXC.Clear(); txtYC.Clear(); txtRadio.Clear();
         }
 
-        // Usa el radio literal (en píxeles). Centro en el centro del PictureBox.
-        private void DrawCircleNoScale()
+        private void BtnSalir_Click(object sender, EventArgs e) { this.Close(); }
+
+        private async Task EjecutarAnimacion()
         {
-            if (!int.TryParse(txtRadio.Text.Trim(), out int r) || r < 0)
+            if (!int.TryParse(txtXC.Text, out int xc) || !int.TryParse(txtYC.Text, out int yc) || !int.TryParse(txtRadio.Text, out int r))
             {
-                MessageBox.Show("Introduce un radio entero no negativo.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                MessageBox.Show("Ingrese valores válidos."); return;
             }
 
-            int w = Math.Max(1, pictureBox1.Width);
-            int h = Math.Max(1, pictureBox1.Height);
+            if (r <= 0) { MessageBox.Show("Radio > 0"); return; }
 
-            if (pictureBox1.Image is Image prev) { pictureBox1.Image = null; prev.Dispose(); }
+            int pixelSize = (int)numPixelSize.Value;
+            int delay = (int)numSpeed.Value;
+            int w = pictureBox1.Width;
+            int h = pictureBox1.Height;
+            int gridW = w / pixelSize;
+            int gridH = h / pixelSize;
 
             Bitmap bmp = new Bitmap(w, h);
+            pictureBox1.Image = bmp;
+
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                g.Clear(pictureBox1.BackColor);
-
-                Point center = new Point(w / 2, h / 2);
-
-                if (r == 0)
+                g.Clear(Color.Black);
+                if (chkGrid.Checked)
                 {
-                    using (var brush = new SolidBrush(Color.Black))
-                        g.FillRectangle(brush, center.X, center.Y, 1, 1);
-
-                    pictureBox1.Image = bmp;
-                    return;
-                }
-
-                int maxR = Math.Min(w, h) / 2;
-                if (r > maxR)
-                {
-                    var res = MessageBox.Show($"El radio {r} excede la mitad del área de dibujo ({maxR}). El círculo será recortado. ¿Continuar?",
-                                              "Radio grande", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (res == DialogResult.No)
+                    using (Pen gridPen = new Pen(Color.FromArgb(30, 30, 30)))
                     {
-                        pictureBox1.Image = bmp;
-                        return;
+                        for (int i = 0; i <= w; i += pixelSize) g.DrawLine(gridPen, i, 0, i, h);
+                        for (int j = 0; j <= h; j += pixelSize) g.DrawLine(gridPen, 0, j, w, j);
                     }
                 }
+                pictureBox1.Refresh();
 
-                _param.DrawCircleParametric(g, center, r, Color.Black);
+                // --- ALGORITMO PARAMÉTRICO ---
+                // Aquí verás que se dibuja pixel a pixel dando la vuelta, NO 8 a la vez
+                using (Brush brush = new SolidBrush(Color.LimeGreen))
+                {
+                    foreach (Point p in _algoritmo.Calcular(xc, yc, r))
+                    {
+                        if (p.X >= 0 && p.X < gridW && p.Y >= 0 && p.Y < gridH)
+                        {
+                            g.FillRectangle(brush, p.X * pixelSize + 1, p.Y * pixelSize + 1, pixelSize - 1, pixelSize - 1);
+                        }
+
+                        pictureBox1.Invalidate();
+                        pictureBox1.Update();
+
+                        // Delay muy pequeño porque son muchos más puntos
+                        if (delay > 0) await Task.Delay(delay / 2);
+                    }
+                }
             }
-
-            pictureBox1.Image = bmp;
         }
     }
 }

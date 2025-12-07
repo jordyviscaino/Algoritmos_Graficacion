@@ -1,72 +1,116 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace Algoritmos_Graficacion
 {
-    internal class CPuntoMedio
+    // ===========================================
+    // 1. ALGORITMO PARAMÉTRICO (Trigonométrico)
+    // ===========================================
+    public class CCirculoParametrico
     {
-        // Dibuja un círculo usando el algoritmo del punto medio.
-        // center y r deben estar en coordenadas de píxel (ya escaladas).
-        public void DrawCircleMidPoint(Graphics g, Point center, int r, Color color)
+        // Este algoritmo NO usa simetría de octantes, dibuja secuencialmente usando ángulos.
+        public IEnumerable<Point> Calcular(int xc, int yc, int radio)
         {
-            if (r < 0) return;
+            // Paso angular: Ajustamos el paso según el radio para evitar huecos.
+            // A mayor radio, necesitamos pasos más pequeños (1/r).
+            double paso = 1.0 / radio;
 
-            int xc = center.X;
-            int yc = center.Y;
-
-            if (r == 0)
+            for (double theta = 0; theta <= 2 * Math.PI; theta += paso)
             {
-                using (var brush = new SolidBrush(color))
-                {
-                    g.FillRectangle(brush, xc, yc, 1, 1);
-                }
-                return;
-            }
+                int x = (int)Math.Round(xc + radio * Math.Cos(theta));
+                int y = (int)Math.Round(yc + radio * Math.Sin(theta));
 
+                yield return new Point(x, y);
+            }
+        }
+    }
+
+    // ===========================================
+    // 2. ALGORITMO BRESENHAM (Simetría de 8 lados)
+    // ===========================================
+    public class CCirculoBresenham
+    {
+        // Devuelve una lista de puntos (los 8 simétricos) en cada paso del cálculo
+        public IEnumerable<Point[]> Calcular(int xc, int yc, int radio)
+        {
             int x = 0;
-            int y = r;
-            int p = 1 - r;
+            int y = radio;
+            int d = 3 - 2 * radio; // Parámetro de decisión inicial
 
-            using (var brush = new SolidBrush(color))
+            while (x <= y)
             {
-                Plot8(g, brush, xc, yc, x, y);
+                // Devolvemos los 8 puntos de simetría para el paso actual
+                yield return ObtenerSimetria8(xc, yc, x, y);
 
-                while (x < y)
+                if (d < 0)
                 {
-                    x++;
-                    if (p < 0)
-                    {
-                        p = p + 2 * x + 1;
-                    }
-                    else
-                    {
-                        y--;
-                        p = p + 2 * (x - y) + 1;
-                    }
-                    Plot8(g, brush, xc, yc, x, y);
+                    d = d + 4 * x + 6;
+                }
+                else
+                {
+                    d = d + 4 * (x - y) + 10;
+                    y--;
+                }
+                x++;
+            }
+        }
+
+        private Point[] ObtenerSimetria8(int xc, int yc, int x, int y)
+        {
+            return new Point[]
+            {
+                new Point(xc + x, yc + y), // Octante 1
+                new Point(xc - x, yc + y), // Octante 2
+                new Point(xc + x, yc - y), // Octante 3
+                new Point(xc - x, yc - y), // Octante 4
+                new Point(xc + y, yc + x), // Octante 5
+                new Point(xc - y, yc + x), // Octante 6
+                new Point(xc + y, yc - x), // Octante 7
+                new Point(xc - y, yc - x)  // Octante 8
+            };
+        }
+    }
+
+    // ===========================================
+    // 3. ALGORITMO PUNTO MEDIO (Midpoint)
+    // ===========================================
+    public class CCirculoPuntoMedio
+    {
+        public IEnumerable<Point[]> Calcular(int xc, int yc, int radio)
+        {
+            int x = 0;
+            int y = radio;
+            // P = 1 - r (versión entera de 5/4 - r)
+            int p = 1 - radio;
+
+            while (x <= y)
+            {
+                yield return ObtenerSimetria8(xc, yc, x, y);
+
+                x++;
+
+                if (p < 0)
+                {
+                    p += 2 * x + 1;
+                }
+                else
+                {
+                    y--;
+                    p += 2 * (x - y) + 1;
                 }
             }
         }
 
-        // Dibuja los ocho puntos simétricos del círculo
-        private static void Plot8(Graphics g, Brush brush, int xc, int yc, int x, int y)
+        private Point[] ObtenerSimetria8(int xc, int yc, int x, int y)
         {
-            // Evitar dibujar fuera de límites no es responsabilidad del algoritmo; Graphics ignorará parcialmente.
-            g.FillRectangle(brush, xc + x, yc + y, 1, 1);
-            g.FillRectangle(brush, xc - x, yc + y, 1, 1);
-            g.FillRectangle(brush, xc + x, yc - y, 1, 1);
-            g.FillRectangle(brush, xc - x, yc - y, 1, 1);
-            g.FillRectangle(brush, xc + y, yc + x, 1, 1);
-            g.FillRectangle(brush, xc - y, yc + x, 1, 1);
-            g.FillRectangle(brush, xc + y, yc - x, 1, 1);
-            g.FillRectangle(brush, xc - y, yc - x, 1, 1);
-        }
-
-        // Mantener interfaz consistente con otras clases de algoritmo
-        public void CloseForm(Form objForm)
-        {
-            objForm.Close();
+            return new Point[]
+            {
+                new Point(xc + x, yc + y), new Point(xc - x, yc + y),
+                new Point(xc + x, yc - y), new Point(xc - x, yc - y),
+                new Point(xc + y, yc + x), new Point(xc - y, yc + x),
+                new Point(xc + y, yc - x), new Point(xc - y, yc - x)
+            };
         }
     }
 }
