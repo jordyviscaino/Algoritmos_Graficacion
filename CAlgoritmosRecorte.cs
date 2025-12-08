@@ -4,9 +4,9 @@ using System.Drawing;
 
 namespace Algoritmos_Graficacion
 {
-    // =========================================================
-    // 1. ALGORITMO LIANG-BARSKY (Paramétrico)
-    // =========================================================
+    // ----------------------------------------------------------
+    // ALGORITMO LIANG-BARSKY (Paramétrico)
+    // ----------------------------------------------------------
     public class CLiangBarsky
     {
         // Devuelve el estado para animación
@@ -80,9 +80,9 @@ namespace Algoritmos_Graficacion
         }
     }
 
-    // =========================================================
-    // 2. ALGORITMO SUBDIVISIÓN DE PUNTO MEDIO
-    // =========================================================
+    // ----------------------------------------------------------
+    // ALGORITMO SUBDIVISIÓN DE PUNTO MEDIO
+    // ----------------------------------------------------------
     public class CPuntoMedioRecorte
     {
         private CCohenSutherland _helper = new CCohenSutherland(); // Usamos su lógica de códigos

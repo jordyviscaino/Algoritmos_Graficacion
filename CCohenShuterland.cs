@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace Algoritmos_Graficacion
 {
-    // Estructura para reportar el estado de la animación paso a paso
+    // Estructura para reportar el estado de la animación paso a paso para borrar
     public struct EstadoRecorte
     {
         public Point P1;

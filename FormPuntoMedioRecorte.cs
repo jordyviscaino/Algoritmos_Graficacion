@@ -6,7 +6,6 @@ using System.Windows.Forms;
 
 namespace Algoritmos_Graficacion
 {
-    // NOTA: Copiar el Designer de FormCohenSutherland y cambiar el nombre de la clase parcial.
     public partial class FormPuntoMedioRecorte : Form
     {
         private CPuntoMedioRecorte _algoritmo = new CPuntoMedioRecorte();
@@ -119,6 +118,11 @@ namespace Algoritmos_Graficacion
                 g.DrawLine(pGrid, r.Left, 0, r.Left, 2000);
                 g.DrawLine(pGrid, r.Right, 0, r.Right, 2000);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

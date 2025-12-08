@@ -123,5 +123,10 @@ namespace Algoritmos_Graficacion
                 for (int j = 0; j <= h; j += pixelSize) g.DrawLine(gridPen, 0, j, w, j);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

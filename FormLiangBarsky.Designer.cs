@@ -14,159 +14,307 @@
 
         private void InitializeComponent()
         {
-            this.groupBoxLine = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtY2 = new System.Windows.Forms.TextBox();
-            this.txtX2 = new System.Windows.Forms.TextBox();
-            this.txtY1 = new System.Windows.Forms.TextBox();
-            this.txtX1 = new System.Windows.Forms.TextBox();
-            this.groupBoxWindow = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtH = new System.Windows.Forms.TextBox();
-            this.txtW = new System.Windows.Forms.TextBox();
-            this.txtYMin = new System.Windows.Forms.TextBox();
-            this.txtXMin = new System.Windows.Forms.TextBox();
-            this.groupBoxControls = new System.Windows.Forms.GroupBox();
-            this.lblMsg = new System.Windows.Forms.Label();
-            this.numSpeed = new System.Windows.Forms.NumericUpDown();
-            this.lblSpeed = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnRecortar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBoxLine.SuspendLayout();
-            this.groupBoxWindow.SuspendLayout();
-            this.groupBoxControls.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            groupBoxLine = new GroupBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtY2 = new TextBox();
+            txtX2 = new TextBox();
+            txtY1 = new TextBox();
+            txtX1 = new TextBox();
+            groupBoxWindow = new GroupBox();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            txtH = new TextBox();
+            txtW = new TextBox();
+            txtYMin = new TextBox();
+            txtXMin = new TextBox();
+            groupBoxControls = new GroupBox();
+            lblMsg = new Label();
+            numSpeed = new NumericUpDown();
+            lblSpeed = new Label();
+            btnSalir = new Button();
+            btnClear = new Button();
+            btnRecortar = new Button();
+            pictureBox1 = new PictureBox();
+            groupBoxLine.SuspendLayout();
+            groupBoxWindow.SuspendLayout();
+            groupBoxControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numSpeed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
-            // groupBoxLine (Datos de Línea)
+            // groupBoxLine
             // 
-            this.groupBoxLine.Controls.Add(this.label4);
-            this.groupBoxLine.Controls.Add(this.label3);
-            this.groupBoxLine.Controls.Add(this.label2);
-            this.groupBoxLine.Controls.Add(this.label1);
-            this.groupBoxLine.Controls.Add(this.txtY2);
-            this.groupBoxLine.Controls.Add(this.txtX2);
-            this.groupBoxLine.Controls.Add(this.txtY1);
-            this.groupBoxLine.Controls.Add(this.txtX1);
-            this.groupBoxLine.Location = new System.Drawing.Point(12, 12);
-            this.groupBoxLine.Name = "groupBoxLine";
-            this.groupBoxLine.Size = new System.Drawing.Size(200, 130);
-            this.groupBoxLine.TabIndex = 0;
-            this.groupBoxLine.TabStop = false;
-            this.groupBoxLine.Text = "Línea a Recortar";
+            groupBoxLine.Controls.Add(label4);
+            groupBoxLine.Controls.Add(label3);
+            groupBoxLine.Controls.Add(label2);
+            groupBoxLine.Controls.Add(label1);
+            groupBoxLine.Controls.Add(txtY2);
+            groupBoxLine.Controls.Add(txtX2);
+            groupBoxLine.Controls.Add(txtY1);
+            groupBoxLine.Controls.Add(txtX1);
+            groupBoxLine.Location = new Point(12, 12);
+            groupBoxLine.Name = "groupBoxLine";
+            groupBoxLine.Size = new Size(200, 130);
+            groupBoxLine.TabIndex = 0;
+            groupBoxLine.TabStop = false;
+            groupBoxLine.Text = "Línea a Recortar";
             // 
-            // Labels Linea
+            // label4
             // 
-            this.label4.AutoSize = true; this.label4.Location = new System.Drawing.Point(105, 80); this.label4.Text = "Y2";
-            this.label3.AutoSize = true; this.label3.Location = new System.Drawing.Point(15, 80); this.label3.Text = "X2";
-            this.label2.AutoSize = true; this.label2.Location = new System.Drawing.Point(105, 30); this.label2.Text = "Y1";
-            this.label1.AutoSize = true; this.label1.Location = new System.Drawing.Point(15, 30); this.label1.Text = "X1";
-            // Inputs Linea
-            this.txtY2.Location = new System.Drawing.Point(130, 77); this.txtY2.Size = new System.Drawing.Size(50, 23);
-            this.txtX2.Location = new System.Drawing.Point(40, 77); this.txtX2.Size = new System.Drawing.Size(50, 23);
-            this.txtY1.Location = new System.Drawing.Point(130, 27); this.txtY1.Size = new System.Drawing.Size(50, 23);
-            this.txtX1.Location = new System.Drawing.Point(40, 27); this.txtX1.Size = new System.Drawing.Size(50, 23);
-
+            label4.AutoSize = true;
+            label4.Location = new Point(105, 80);
+            label4.Name = "label4";
+            label4.Size = new Size(20, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Y2";
             // 
-            // groupBoxWindow (Datos Ventana de Recorte)
+            // label3
             // 
-            this.groupBoxWindow.Controls.Add(this.label5);
-            this.groupBoxWindow.Controls.Add(this.label6);
-            this.groupBoxWindow.Controls.Add(this.label7);
-            this.groupBoxWindow.Controls.Add(this.label8);
-            this.groupBoxWindow.Controls.Add(this.txtH);
-            this.groupBoxWindow.Controls.Add(this.txtW);
-            this.groupBoxWindow.Controls.Add(this.txtYMin);
-            this.groupBoxWindow.Controls.Add(this.txtXMin);
-            this.groupBoxWindow.Location = new System.Drawing.Point(220, 12);
-            this.groupBoxWindow.Name = "groupBoxWindow";
-            this.groupBoxWindow.Size = new System.Drawing.Size(200, 130);
-            this.groupBoxWindow.TabIndex = 1;
-            this.groupBoxWindow.TabStop = false;
-            this.groupBoxWindow.Text = "Ventana de Recorte";
+            label3.AutoSize = true;
+            label3.Location = new Point(15, 80);
+            label3.Name = "label3";
+            label3.Size = new Size(20, 15);
+            label3.TabIndex = 1;
+            label3.Text = "X2";
             // 
-            // Labels Ventana
+            // label2
             // 
-            this.label5.AutoSize = true; this.label5.Location = new System.Drawing.Point(105, 80); this.label5.Text = "Alto";
-            this.label6.AutoSize = true; this.label6.Location = new System.Drawing.Point(15, 80); this.label6.Text = "Ancho";
-            this.label7.AutoSize = true; this.label7.Location = new System.Drawing.Point(105, 30); this.label7.Text = "Ymin";
-            this.label8.AutoSize = true; this.label8.Location = new System.Drawing.Point(15, 30); this.label8.Text = "Xmin";
-            // Inputs Ventana
-            this.txtH.Location = new System.Drawing.Point(140, 77); this.txtH.Size = new System.Drawing.Size(50, 23); this.txtH.Text = "150";
-            this.txtW.Location = new System.Drawing.Point(60, 77); this.txtW.Size = new System.Drawing.Size(40, 23); this.txtW.Text = "200";
-            this.txtYMin.Location = new System.Drawing.Point(140, 27); this.txtYMin.Size = new System.Drawing.Size(50, 23); this.txtYMin.Text = "100";
-            this.txtXMin.Location = new System.Drawing.Point(60, 27); this.txtXMin.Size = new System.Drawing.Size(40, 23); this.txtXMin.Text = "150";
-
+            label2.AutoSize = true;
+            label2.Location = new Point(105, 30);
+            label2.Name = "label2";
+            label2.Size = new Size(20, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Y1";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 15);
+            label1.TabIndex = 3;
+            label1.Text = "X1";
+            // 
+            // txtY2
+            // 
+            txtY2.Location = new Point(130, 77);
+            txtY2.Name = "txtY2";
+            txtY2.Size = new Size(50, 23);
+            txtY2.TabIndex = 4;
+            // 
+            // txtX2
+            // 
+            txtX2.Location = new Point(40, 77);
+            txtX2.Name = "txtX2";
+            txtX2.Size = new Size(50, 23);
+            txtX2.TabIndex = 5;
+            // 
+            // txtY1
+            // 
+            txtY1.Location = new Point(130, 27);
+            txtY1.Name = "txtY1";
+            txtY1.Size = new Size(50, 23);
+            txtY1.TabIndex = 6;
+            // 
+            // txtX1
+            // 
+            txtX1.Location = new Point(40, 27);
+            txtX1.Name = "txtX1";
+            txtX1.Size = new Size(50, 23);
+            txtX1.TabIndex = 7;
+            // 
+            // groupBoxWindow
+            // 
+            groupBoxWindow.Controls.Add(label5);
+            groupBoxWindow.Controls.Add(label6);
+            groupBoxWindow.Controls.Add(label7);
+            groupBoxWindow.Controls.Add(label8);
+            groupBoxWindow.Controls.Add(txtH);
+            groupBoxWindow.Controls.Add(txtW);
+            groupBoxWindow.Controls.Add(txtYMin);
+            groupBoxWindow.Controls.Add(txtXMin);
+            groupBoxWindow.Location = new Point(220, 12);
+            groupBoxWindow.Name = "groupBoxWindow";
+            groupBoxWindow.Size = new Size(200, 130);
+            groupBoxWindow.TabIndex = 1;
+            groupBoxWindow.TabStop = false;
+            groupBoxWindow.Text = "Ventana de Recorte";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(105, 80);
+            label5.Name = "label5";
+            label5.Size = new Size(29, 15);
+            label5.TabIndex = 0;
+            label5.Text = "Alto";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(15, 80);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 15);
+            label6.TabIndex = 1;
+            label6.Text = "Ancho";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(105, 30);
+            label7.Name = "label7";
+            label7.Size = new Size(34, 15);
+            label7.TabIndex = 2;
+            label7.Text = "Ymin";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(15, 30);
+            label8.Name = "label8";
+            label8.Size = new Size(35, 15);
+            label8.TabIndex = 3;
+            label8.Text = "Xmin";
+            // 
+            // txtH
+            // 
+            txtH.Location = new Point(140, 77);
+            txtH.Name = "txtH";
+            txtH.Size = new Size(50, 23);
+            txtH.TabIndex = 4;
+            txtH.Text = "150";
+            // 
+            // txtW
+            // 
+            txtW.Location = new Point(60, 77);
+            txtW.Name = "txtW";
+            txtW.Size = new Size(40, 23);
+            txtW.TabIndex = 5;
+            txtW.Text = "200";
+            // 
+            // txtYMin
+            // 
+            txtYMin.Location = new Point(140, 27);
+            txtYMin.Name = "txtYMin";
+            txtYMin.Size = new Size(50, 23);
+            txtYMin.TabIndex = 6;
+            txtYMin.Text = "100";
+            // 
+            // txtXMin
+            // 
+            txtXMin.Location = new Point(60, 27);
+            txtXMin.Name = "txtXMin";
+            txtXMin.Size = new Size(40, 23);
+            txtXMin.TabIndex = 7;
+            txtXMin.Text = "150";
             // 
             // groupBoxControls
             // 
-            this.groupBoxControls.Controls.Add(this.lblMsg);
-            this.groupBoxControls.Controls.Add(this.numSpeed);
-            this.groupBoxControls.Controls.Add(this.lblSpeed);
-            this.groupBoxControls.Controls.Add(this.btnSalir);
-            this.groupBoxControls.Controls.Add(this.btnClear);
-            this.groupBoxControls.Controls.Add(this.btnRecortar);
-            this.groupBoxControls.Location = new System.Drawing.Point(430, 12);
-            this.groupBoxControls.Name = "groupBoxControls";
-            this.groupBoxControls.Size = new System.Drawing.Size(350, 130);
-            this.groupBoxControls.TabIndex = 2;
-            this.groupBoxControls.TabStop = false;
-            this.groupBoxControls.Text = "Controles";
+            groupBoxControls.Controls.Add(lblMsg);
+            groupBoxControls.Controls.Add(numSpeed);
+            groupBoxControls.Controls.Add(lblSpeed);
+            groupBoxControls.Controls.Add(btnSalir);
+            groupBoxControls.Controls.Add(btnClear);
+            groupBoxControls.Controls.Add(btnRecortar);
+            groupBoxControls.Location = new Point(430, 12);
+            groupBoxControls.Name = "groupBoxControls";
+            groupBoxControls.Size = new Size(350, 130);
+            groupBoxControls.TabIndex = 2;
+            groupBoxControls.TabStop = false;
+            groupBoxControls.Text = "Controles";
             // 
-            // lblMsg (Para mostrar estado actual del algoritmo)
+            // lblMsg
             // 
-            this.lblMsg.AutoSize = true;
-            this.lblMsg.ForeColor = System.Drawing.Color.Blue;
-            this.lblMsg.Location = new System.Drawing.Point(15, 95);
-            this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(16, 15);
-            this.lblMsg.TabIndex = 6;
-            this.lblMsg.Text = "...";
+            lblMsg.AutoSize = true;
+            lblMsg.ForeColor = Color.Blue;
+            lblMsg.Location = new Point(15, 95);
+            lblMsg.Name = "lblMsg";
+            lblMsg.Size = new Size(16, 15);
+            lblMsg.TabIndex = 6;
+            lblMsg.Text = "...";
             // 
-            // Controls
+            // numSpeed
             // 
-            this.lblSpeed.AutoSize = true; this.lblSpeed.Location = new System.Drawing.Point(15, 30); this.lblSpeed.Text = "Delay(ms)";
-            this.numSpeed.Location = new System.Drawing.Point(80, 28); this.numSpeed.Maximum = new decimal(new int[] { 2000, 0, 0, 0 }); this.numSpeed.Value = new decimal(new int[] { 500, 0, 0, 0 });
-
-            this.btnRecortar.Location = new System.Drawing.Point(15, 60); this.btnRecortar.Size = new System.Drawing.Size(100, 30); this.btnRecortar.Text = "Recortar"; this.btnRecortar.BackColor = System.Drawing.SystemColors.MenuHighlight; this.btnRecortar.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(130, 60); this.btnClear.Size = new System.Drawing.Size(80, 30); this.btnClear.Text = "Limpiar";
-            this.btnSalir.Location = new System.Drawing.Point(220, 60); this.btnSalir.Size = new System.Drawing.Size(80, 30); this.btnSalir.Text = "Salir"; this.btnSalir.BackColor = System.Drawing.Color.Red; this.btnSalir.ForeColor = System.Drawing.Color.White;
-
+            numSpeed.Location = new Point(80, 28);
+            numSpeed.Maximum = new decimal(new int[] { 2000, 0, 0, 0 });
+            numSpeed.Name = "numSpeed";
+            numSpeed.Size = new Size(120, 23);
+            numSpeed.TabIndex = 7;
+            numSpeed.Value = new decimal(new int[] { 500, 0, 0, 0 });
+            // 
+            // lblSpeed
+            // 
+            lblSpeed.AutoSize = true;
+            lblSpeed.Location = new Point(15, 30);
+            lblSpeed.Name = "lblSpeed";
+            lblSpeed.Size = new Size(60, 15);
+            lblSpeed.TabIndex = 8;
+            lblSpeed.Text = "Delay(ms)";
+            // 
+            // btnSalir
+            // 
+            btnSalir.BackColor = Color.Red;
+            btnSalir.ForeColor = Color.White;
+            btnSalir.Location = new Point(220, 60);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(80, 30);
+            btnSalir.TabIndex = 9;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(130, 60);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(80, 30);
+            btnClear.TabIndex = 10;
+            btnClear.Text = "Limpiar";
+            // 
+            // btnRecortar
+            // 
+            btnRecortar.BackColor = SystemColors.MenuHighlight;
+            btnRecortar.ForeColor = Color.White;
+            btnRecortar.Location = new Point(15, 60);
+            btnRecortar.Name = "btnRecortar";
+            btnRecortar.Size = new Size(100, 30);
+            btnRecortar.TabIndex = 11;
+            btnRecortar.Text = "Recortar";
+            btnRecortar.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(770, 400);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-
+            pictureBox1.BackColor = Color.Black;
+            pictureBox1.Location = new Point(12, 150);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(770, 400);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // FormCohenSutherland
+            // FormLiangBarsky
             // 
-            this.ClientSize = new System.Drawing.Size(800, 570);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBoxControls);
-            this.Controls.Add(this.groupBoxWindow);
-            this.Controls.Add(this.groupBoxLine);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Text = "Algoritmo Cohen-Sutherland (Recorte de Líneas)";
-            this.groupBoxLine.ResumeLayout(false); this.groupBoxLine.PerformLayout();
-            this.groupBoxWindow.ResumeLayout(false); this.groupBoxWindow.PerformLayout();
-            this.groupBoxControls.ResumeLayout(false); this.groupBoxControls.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
+            ClientSize = new Size(800, 570);
+            Controls.Add(pictureBox1);
+            Controls.Add(groupBoxControls);
+            Controls.Add(groupBoxWindow);
+            Controls.Add(groupBoxLine);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "FormLiangBarsky";
+            Text = "Algoritmo Cohen-Sutherland (Recorte de Líneas)";
+            groupBoxLine.ResumeLayout(false);
+            groupBoxLine.PerformLayout();
+            groupBoxWindow.ResumeLayout(false);
+            groupBoxWindow.PerformLayout();
+            groupBoxControls.ResumeLayout(false);
+            groupBoxControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

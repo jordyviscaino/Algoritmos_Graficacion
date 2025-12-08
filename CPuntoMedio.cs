@@ -4,9 +4,9 @@ using System.Drawing;
 
 namespace Algoritmos_Graficacion
 {
-    // ===========================================
-    // 1. ALGORITMO PARAMÉTRICO (Trigonométrico)
-    // ===========================================
+    // ----------------------------------------------------------
+    // ALGORITMO PARAMÉTRICO (Trigonométrico)
+    // ----------------------------------------------------------
     public class CCirculoParametrico
     {
         // Este algoritmo NO usa simetría de octantes, dibuja secuencialmente usando ángulos.
@@ -26,9 +26,9 @@ namespace Algoritmos_Graficacion
         }
     }
 
-    // ===========================================
-    // 2. ALGORITMO BRESENHAM (Simetría de 8 lados)
-    // ===========================================
+    // ----------------------------------------------------------
+    // ALGORITMO BRESENHAM (Simetría de 8 lados)
+    // ----------------------------------------------------------
     public class CCirculoBresenham
     {
         // Devuelve una lista de puntos (los 8 simétricos) en cada paso del cálculo
@@ -72,9 +72,9 @@ namespace Algoritmos_Graficacion
         }
     }
 
-    // ===========================================
-    // 3. ALGORITMO PUNTO MEDIO (Midpoint)
-    // ===========================================
+    // ----------------------------------------------------------
+    // ALGORITMO PUNTO MEDIO (Midpoint)
+    // ----------------------------------------------------------
     public class CCirculoPuntoMedio
     {
         public IEnumerable<Point[]> Calcular(int xc, int yc, int radio)

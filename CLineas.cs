@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace Algoritmos_Graficacion
 {
-    // ===========================================
-    // 1. ALGORITMO INCREMENTAL (Ecuación Básica)
-    // ===========================================
+    // ----------------------------------------------------------
+    // ALGORITMO INCREMENTAL (Ecuación Básica)
+    // ----------------------------------------------------------
     public class CIncremento
     {
         public void DibujarLinea(Graphics g, Point p1, Point p2, Color color)
@@ -38,9 +38,9 @@ namespace Algoritmos_Graficacion
         }
     }
 
-    // ===========================================
-    // 2. ALGORITMO DDA (Diferencial)
-    // ===========================================
+    // ----------------------------------------------------------
+    // ALGORITMO DDA (Diferencial)
+    // ----------------------------------------------------------
     public class CDDA
     {
         public void DibujarLinea(Graphics g, Point p1, Point p2, Color color)
@@ -71,9 +71,9 @@ namespace Algoritmos_Graficacion
         }
     }
 
-    // ===========================================
-    // 3. ALGORITMO BRESENHAM (Enteros)
-    // ===========================================
+    // ----------------------------------------------------------
+    // ALGORITMO BRESENHAM (Enteros)
+    // ----------------------------------------------------------
     public class CBresenham
     {
         public void DibujarLinea(Graphics g, Point p1, Point p2, Color color)

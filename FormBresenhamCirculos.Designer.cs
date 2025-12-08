@@ -14,233 +14,234 @@
 
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtRadio = new System.Windows.Forms.TextBox();
-            this.txtYC = new System.Windows.Forms.TextBox();
-            this.txtXC = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblPixel = new System.Windows.Forms.Label();
-            this.numPixelSize = new System.Windows.Forms.NumericUpDown();
-            this.lblSpeed = new System.Windows.Forms.Label();
-            this.numSpeed = new System.Windows.Forms.NumericUpDown();
-            this.chkOctantes = new System.Windows.Forms.CheckBox();
-            this.chkGrid = new System.Windows.Forms.CheckBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnDraw = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPixelSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtRadio = new TextBox();
+            txtYC = new TextBox();
+            txtXC = new TextBox();
+            groupBox2 = new GroupBox();
+            lblPixel = new Label();
+            numPixelSize = new NumericUpDown();
+            lblSpeed = new Label();
+            numSpeed = new NumericUpDown();
+            chkOctantes = new CheckBox();
+            chkGrid = new CheckBox();
+            btnSalir = new Button();
+            btnClear = new Button();
+            btnDraw = new Button();
+            pictureBox1 = new PictureBox();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numPixelSize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numSpeed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtRadio);
-            this.groupBox1.Controls.Add(this.txtYC);
-            this.groupBox1.Controls.Add(this.txtXC);
-            this.groupBox1.Location = new System.Drawing.Point(21, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(262, 110);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Círculo";
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(txtRadio);
+            groupBox1.Controls.Add(txtYC);
+            groupBox1.Controls.Add(txtXC);
+            groupBox1.Location = new Point(21, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(262, 110);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Datos del Círculo";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Radio";
+            label3.AutoSize = true;
+            label3.Location = new Point(38, 77);
+            label3.Name = "label3";
+            label3.Size = new Size(37, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Radio";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(145, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "YC";
+            label2.AutoSize = true;
+            label2.Location = new Point(145, 29);
+            label2.Name = "label2";
+            label2.Size = new Size(22, 15);
+            label2.TabIndex = 4;
+            label2.Text = "YC";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "XC";
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(22, 15);
+            label1.TabIndex = 3;
+            label1.Text = "XC";
             // 
             // txtRadio
             // 
-            this.txtRadio.Location = new System.Drawing.Point(81, 74);
-            this.txtRadio.Name = "txtRadio";
-            this.txtRadio.Size = new System.Drawing.Size(100, 23);
-            this.txtRadio.TabIndex = 2;
+            txtRadio.Location = new Point(81, 74);
+            txtRadio.Name = "txtRadio";
+            txtRadio.Size = new Size(100, 23);
+            txtRadio.TabIndex = 2;
             // 
             // txtYC
             // 
-            this.txtYC.Location = new System.Drawing.Point(172, 26);
-            this.txtYC.Name = "txtYC";
-            this.txtYC.Size = new System.Drawing.Size(68, 23);
-            this.txtYC.TabIndex = 1;
+            txtYC.Location = new Point(172, 26);
+            txtYC.Name = "txtYC";
+            txtYC.Size = new Size(68, 23);
+            txtYC.TabIndex = 1;
             // 
             // txtXC
             // 
-            this.txtXC.Location = new System.Drawing.Point(48, 26);
-            this.txtXC.Name = "txtXC";
-            this.txtXC.Size = new System.Drawing.Size(68, 23);
-            this.txtXC.TabIndex = 0;
+            txtXC.Location = new Point(48, 26);
+            txtXC.Name = "txtXC";
+            txtXC.Size = new Size(68, 23);
+            txtXC.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lblPixel);
-            this.groupBox2.Controls.Add(this.numPixelSize);
-            this.groupBox2.Controls.Add(this.lblSpeed);
-            this.groupBox2.Controls.Add(this.numSpeed);
-            this.groupBox2.Controls.Add(this.chkOctantes);
-            this.groupBox2.Controls.Add(this.chkGrid);
-            this.groupBox2.Controls.Add(this.btnSalir);
-            this.groupBox2.Controls.Add(this.btnClear);
-            this.groupBox2.Controls.Add(this.btnDraw);
-            this.groupBox2.Location = new System.Drawing.Point(289, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(387, 110);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Control y Visualización";
+            groupBox2.Controls.Add(lblPixel);
+            groupBox2.Controls.Add(numPixelSize);
+            groupBox2.Controls.Add(lblSpeed);
+            groupBox2.Controls.Add(numSpeed);
+            groupBox2.Controls.Add(chkOctantes);
+            groupBox2.Controls.Add(chkGrid);
+            groupBox2.Controls.Add(btnSalir);
+            groupBox2.Controls.Add(btnClear);
+            groupBox2.Controls.Add(btnDraw);
+            groupBox2.Location = new Point(289, 12);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(387, 110);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Control y Visualización";
             // 
             // lblPixel
             // 
-            this.lblPixel.AutoSize = true;
-            this.lblPixel.Location = new System.Drawing.Point(141, 30);
-            this.lblPixel.Name = "lblPixel";
-            this.lblPixel.Size = new System.Drawing.Size(46, 15);
-            this.lblPixel.TabIndex = 8;
-            this.lblPixel.Text = "Tamaño";
+            lblPixel.AutoSize = true;
+            lblPixel.Location = new Point(141, 30);
+            lblPixel.Name = "lblPixel";
+            lblPixel.Size = new Size(50, 15);
+            lblPixel.TabIndex = 8;
+            lblPixel.Text = "Tamaño";
             // 
             // numPixelSize
             // 
-            this.numPixelSize.Location = new System.Drawing.Point(193, 27);
-            this.numPixelSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            this.numPixelSize.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
-            this.numPixelSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
-            this.numPixelSize.Name = "numPixelSize";
-            this.numPixelSize.Size = new System.Drawing.Size(45, 23);
-            this.numPixelSize.TabIndex = 7;
+            numPixelSize.Location = new Point(193, 27);
+            numPixelSize.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
+            numPixelSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numPixelSize.Name = "numPixelSize";
+            numPixelSize.Size = new Size(45, 23);
+            numPixelSize.TabIndex = 7;
+            numPixelSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // lblSpeed
             // 
-            this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Location = new System.Drawing.Point(15, 30);
-            this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(36, 15);
-            this.lblSpeed.TabIndex = 6;
-            this.lblSpeed.Text = "Delay";
+            lblSpeed.AutoSize = true;
+            lblSpeed.Location = new Point(15, 30);
+            lblSpeed.Name = "lblSpeed";
+            lblSpeed.Size = new Size(36, 15);
+            lblSpeed.TabIndex = 6;
+            lblSpeed.Text = "Delay";
             // 
             // numSpeed
             // 
-            this.numSpeed.Location = new System.Drawing.Point(57, 27);
-            this.numSpeed.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            this.numSpeed.Name = "numSpeed";
-            this.numSpeed.Value = new decimal(new int[] { 50, 0, 0, 0 });
-            this.numSpeed.Size = new System.Drawing.Size(55, 23);
-            this.numSpeed.TabIndex = 5;
+            numSpeed.Location = new Point(57, 27);
+            numSpeed.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numSpeed.Name = "numSpeed";
+            numSpeed.Size = new Size(55, 23);
+            numSpeed.TabIndex = 5;
+            numSpeed.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // chkOctantes
             // 
-            this.chkOctantes.AutoSize = true;
-            this.chkOctantes.Checked = true;
-            this.chkOctantes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkOctantes.Location = new System.Drawing.Point(298, 49);
-            this.chkOctantes.Name = "chkOctantes";
-            this.chkOctantes.Size = new System.Drawing.Size(83, 19);
-            this.chkOctantes.TabIndex = 4;
-            this.chkOctantes.Text = "Ver 8 Oct.";
-            this.chkOctantes.UseVisualStyleBackColor = true;
+            chkOctantes.AutoSize = true;
+            chkOctantes.Checked = true;
+            chkOctantes.CheckState = CheckState.Checked;
+            chkOctantes.Location = new Point(298, 49);
+            chkOctantes.Name = "chkOctantes";
+            chkOctantes.Size = new Size(76, 19);
+            chkOctantes.TabIndex = 4;
+            chkOctantes.Text = "Ver 8 Oct.";
+            chkOctantes.UseVisualStyleBackColor = true;
             // 
             // chkGrid
             // 
-            this.chkGrid.AutoSize = true;
-            this.chkGrid.Checked = true;
-            this.chkGrid.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGrid.Location = new System.Drawing.Point(298, 24);
-            this.chkGrid.Name = "chkGrid";
-            this.chkGrid.Size = new System.Drawing.Size(48, 19);
-            this.chkGrid.TabIndex = 3;
-            this.chkGrid.Text = "Grid";
-            this.chkGrid.UseVisualStyleBackColor = true;
+            chkGrid.AutoSize = true;
+            chkGrid.Checked = true;
+            chkGrid.CheckState = CheckState.Checked;
+            chkGrid.Location = new Point(298, 24);
+            chkGrid.Name = "chkGrid";
+            chkGrid.Size = new Size(48, 19);
+            chkGrid.TabIndex = 3;
+            chkGrid.Text = "Grid";
+            chkGrid.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Red;
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalir.Location = new System.Drawing.Point(193, 67);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 29);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.BackColor = Color.Red;
+            btnSalir.ForeColor = SystemColors.ButtonHighlight;
+            btnSalir.Location = new Point(193, 67);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 29);
+            btnSalir.TabIndex = 2;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(102, 67);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 29);
-            this.btnClear.TabIndex = 1;
-            this.btnClear.Text = "Limpiar";
-            this.btnClear.UseVisualStyleBackColor = true;
+            btnClear.Location = new Point(102, 67);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 29);
+            btnClear.TabIndex = 1;
+            btnClear.Text = "Limpiar";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // btnDraw
             // 
-            this.btnDraw.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDraw.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDraw.Location = new System.Drawing.Point(15, 67);
-            this.btnDraw.Name = "btnDraw";
-            this.btnDraw.Size = new System.Drawing.Size(75, 29);
-            this.btnDraw.TabIndex = 0;
-            this.btnDraw.Text = "Animar";
-            this.btnDraw.UseVisualStyleBackColor = false;
+            btnDraw.BackColor = SystemColors.Highlight;
+            btnDraw.ForeColor = SystemColors.ButtonHighlight;
+            btnDraw.Location = new Point(15, 67);
+            btnDraw.Name = "btnDraw";
+            btnDraw.Size = new Size(75, 29);
+            btnDraw.TabIndex = 0;
+            btnDraw.Text = "Animar";
+            btnDraw.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 137);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(655, 301);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Black;
+            pictureBox1.Location = new Point(21, 137);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(655, 301);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // FormBresenhamCirculo
+            // FormBresenhamCirculos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(696, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FormBresenhamCirculo";
-            this.Text = "Círculo Bresenham (Simetría 8 Octantes)";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPixelSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Info;
+            ClientSize = new Size(696, 450);
+            Controls.Add(pictureBox1);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "FormBresenhamCirculos";
+            Text = "Círculo Bresenham (Simetría 8 Octantes)";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numPixelSize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

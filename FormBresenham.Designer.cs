@@ -14,242 +14,243 @@
 
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtY1 = new System.Windows.Forms.TextBox();
-            this.txtX0 = new System.Windows.Forms.TextBox();
-            this.txtY0 = new System.Windows.Forms.TextBox();
-            this.txtX1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblPixel = new System.Windows.Forms.Label();
-            this.numPixelSize = new System.Windows.Forms.NumericUpDown();
-            this.lblSpeed = new System.Windows.Forms.Label();
-            this.numSpeed = new System.Windows.Forms.NumericUpDown();
-            this.chkGrid = new System.Windows.Forms.CheckBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnDraw = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPixelSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtY1 = new TextBox();
+            txtX0 = new TextBox();
+            txtY0 = new TextBox();
+            txtX1 = new TextBox();
+            groupBox2 = new GroupBox();
+            lblPixel = new Label();
+            numPixelSize = new NumericUpDown();
+            lblSpeed = new Label();
+            numSpeed = new NumericUpDown();
+            chkGrid = new CheckBox();
+            btnSalir = new Button();
+            btnClear = new Button();
+            btnDraw = new Button();
+            pictureBox1 = new PictureBox();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numPixelSize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numSpeed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtY1);
-            this.groupBox1.Controls.Add(this.txtX0);
-            this.groupBox1.Controls.Add(this.txtY0);
-            this.groupBox1.Controls.Add(this.txtX1);
-            this.groupBox1.Location = new System.Drawing.Point(21, 17);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Coordenadas (Bresenham)";
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(txtY1);
+            groupBox1.Controls.Add(txtX0);
+            groupBox1.Controls.Add(txtY0);
+            groupBox1.Controls.Add(txtX1);
+            groupBox1.Location = new Point(21, 17);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(353, 100);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Coordenadas (Bresenham)";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(193, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Y2";
+            label4.AutoSize = true;
+            label4.Location = new Point(193, 75);
+            label4.Name = "label4";
+            label4.Size = new Size(20, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Y2";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "X2";
+            label3.AutoSize = true;
+            label3.Location = new Point(13, 75);
+            label3.Name = "label3";
+            label3.Size = new Size(20, 15);
+            label3.TabIndex = 6;
+            label3.Text = "X2";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(193, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Y1";
+            label2.AutoSize = true;
+            label2.Location = new Point(193, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(20, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Y1";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "X1";
+            label1.AutoSize = true;
+            label1.Location = new Point(13, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 15);
+            label1.TabIndex = 4;
+            label1.Text = "X1";
             // 
             // txtY1
             // 
-            this.txtY1.Location = new System.Drawing.Point(237, 67);
-            this.txtY1.Name = "txtY1";
-            this.txtY1.Size = new System.Drawing.Size(100, 23);
-            this.txtY1.TabIndex = 3;
+            txtY1.Location = new Point(237, 67);
+            txtY1.Name = "txtY1";
+            txtY1.Size = new Size(100, 23);
+            txtY1.TabIndex = 3;
             // 
             // txtX0
             // 
-            this.txtX0.Location = new System.Drawing.Point(63, 67);
-            this.txtX0.Name = "txtX0";
-            this.txtX0.Size = new System.Drawing.Size(100, 23);
-            this.txtX0.TabIndex = 2;
+            txtX0.Location = new Point(63, 67);
+            txtX0.Name = "txtX0";
+            txtX0.Size = new Size(100, 23);
+            txtX0.TabIndex = 2;
             // 
             // txtY0
             // 
-            this.txtY0.Location = new System.Drawing.Point(237, 22);
-            this.txtY0.Name = "txtY0";
-            this.txtY0.Size = new System.Drawing.Size(100, 23);
-            this.txtY0.TabIndex = 1;
+            txtY0.Location = new Point(237, 22);
+            txtY0.Name = "txtY0";
+            txtY0.Size = new Size(100, 23);
+            txtY0.TabIndex = 1;
             // 
             // txtX1
             // 
-            this.txtX1.Location = new System.Drawing.Point(63, 22);
-            this.txtX1.Name = "txtX1";
-            this.txtX1.Size = new System.Drawing.Size(100, 23);
-            this.txtX1.TabIndex = 0;
+            txtX1.Location = new Point(63, 22);
+            txtX1.Name = "txtX1";
+            txtX1.Size = new Size(100, 23);
+            txtX1.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lblPixel);
-            this.groupBox2.Controls.Add(this.numPixelSize);
-            this.groupBox2.Controls.Add(this.lblSpeed);
-            this.groupBox2.Controls.Add(this.numSpeed);
-            this.groupBox2.Controls.Add(this.chkGrid);
-            this.groupBox2.Controls.Add(this.btnSalir);
-            this.groupBox2.Controls.Add(this.btnClear);
-            this.groupBox2.Controls.Add(this.btnDraw);
-            this.groupBox2.Location = new System.Drawing.Point(380, 17);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(296, 110);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Visualización y Control";
+            groupBox2.Controls.Add(lblPixel);
+            groupBox2.Controls.Add(numPixelSize);
+            groupBox2.Controls.Add(lblSpeed);
+            groupBox2.Controls.Add(numSpeed);
+            groupBox2.Controls.Add(chkGrid);
+            groupBox2.Controls.Add(btnSalir);
+            groupBox2.Controls.Add(btnClear);
+            groupBox2.Controls.Add(btnDraw);
+            groupBox2.Location = new Point(380, 17);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(296, 110);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Visualización y Control";
             // 
             // lblPixel
             // 
-            this.lblPixel.AutoSize = true;
-            this.lblPixel.Location = new System.Drawing.Point(145, 25);
-            this.lblPixel.Name = "lblPixel";
-            this.lblPixel.Size = new System.Drawing.Size(46, 15);
-            this.lblPixel.TabIndex = 7;
-            this.lblPixel.Text = "Tamaño:";
+            lblPixel.AutoSize = true;
+            lblPixel.Location = new Point(145, 25);
+            lblPixel.Name = "lblPixel";
+            lblPixel.Size = new Size(53, 15);
+            lblPixel.TabIndex = 7;
+            lblPixel.Text = "Tamaño:";
             // 
             // numPixelSize
             // 
-            this.numPixelSize.Location = new System.Drawing.Point(197, 22);
-            this.numPixelSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            this.numPixelSize.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
-            this.numPixelSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
-            this.numPixelSize.Name = "numPixelSize";
-            this.numPixelSize.Size = new System.Drawing.Size(45, 23);
-            this.numPixelSize.TabIndex = 6;
+            numPixelSize.Location = new Point(197, 22);
+            numPixelSize.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
+            numPixelSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numPixelSize.Name = "numPixelSize";
+            numPixelSize.Size = new Size(45, 23);
+            numPixelSize.TabIndex = 6;
+            numPixelSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // lblSpeed
             // 
-            this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Location = new System.Drawing.Point(6, 25);
-            this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(61, 15);
-            this.lblSpeed.TabIndex = 5;
-            this.lblSpeed.Text = "Delay(ms):";
+            lblSpeed.AutoSize = true;
+            lblSpeed.Location = new Point(6, 25);
+            lblSpeed.Name = "lblSpeed";
+            lblSpeed.Size = new Size(63, 15);
+            lblSpeed.TabIndex = 5;
+            lblSpeed.Text = "Delay(ms):";
             // 
             // numSpeed
             // 
-            this.numSpeed.Location = new System.Drawing.Point(73, 22);
-            this.numSpeed.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            this.numSpeed.Name = "numSpeed";
-            this.numSpeed.Value = new decimal(new int[] { 50, 0, 0, 0 });
-            this.numSpeed.Size = new System.Drawing.Size(55, 23);
-            this.numSpeed.TabIndex = 4;
+            numSpeed.Location = new Point(73, 22);
+            numSpeed.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numSpeed.Name = "numSpeed";
+            numSpeed.Size = new Size(55, 23);
+            numSpeed.TabIndex = 4;
+            numSpeed.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // chkGrid
             // 
-            this.chkGrid.AutoSize = true;
-            this.chkGrid.Checked = true;
-            this.chkGrid.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGrid.Location = new System.Drawing.Point(248, 24);
-            this.chkGrid.Name = "chkGrid";
-            this.chkGrid.Size = new System.Drawing.Size(48, 19);
-            this.chkGrid.TabIndex = 3;
-            this.chkGrid.Text = "Grid";
-            this.chkGrid.UseVisualStyleBackColor = true;
+            chkGrid.AutoSize = true;
+            chkGrid.Checked = true;
+            chkGrid.CheckState = CheckState.Checked;
+            chkGrid.Location = new Point(248, 24);
+            chkGrid.Name = "chkGrid";
+            chkGrid.Size = new Size(48, 19);
+            chkGrid.TabIndex = 3;
+            chkGrid.Text = "Grid";
+            chkGrid.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Red;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalir.Location = new System.Drawing.Point(183, 65);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 31);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.BackColor = Color.Red;
+            btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnSalir.ForeColor = SystemColors.ButtonHighlight;
+            btnSalir.Location = new Point(183, 65);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 31);
+            btnSalir.TabIndex = 2;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnClear.Location = new System.Drawing.Point(102, 65);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 31);
-            this.btnClear.TabIndex = 1;
-            this.btnClear.Text = "Borrar";
-            this.btnClear.UseVisualStyleBackColor = true;
+            btnClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnClear.Location = new Point(102, 65);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 31);
+            btnClear.TabIndex = 1;
+            btnClear.Text = "Borrar";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // btnDraw
             // 
-            this.btnDraw.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDraw.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDraw.Location = new System.Drawing.Point(6, 65);
-            this.btnDraw.Name = "btnDraw";
-            this.btnDraw.Size = new System.Drawing.Size(90, 31);
-            this.btnDraw.TabIndex = 0;
-            this.btnDraw.Text = "Animar";
-            this.btnDraw.UseVisualStyleBackColor = false;
+            btnDraw.BackColor = SystemColors.MenuHighlight;
+            btnDraw.FlatStyle = FlatStyle.Flat;
+            btnDraw.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnDraw.Location = new Point(6, 65);
+            btnDraw.Name = "btnDraw";
+            btnDraw.Size = new Size(90, 31);
+            btnDraw.TabIndex = 0;
+            btnDraw.Text = "Animar";
+            btnDraw.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 133);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(655, 304);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Black;
+            pictureBox1.Location = new Point(21, 133);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(655, 304);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // FormBresenham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(688, 449);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FormBresenham";
-            this.Text = "Algoritmo Bresenham (Animado)";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPixelSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Info;
+            ClientSize = new Size(688, 449);
+            Controls.Add(pictureBox1);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "FormBresenham";
+            Text = "Algoritmo Bresenham (Animado)";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numPixelSize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
 
         }
 

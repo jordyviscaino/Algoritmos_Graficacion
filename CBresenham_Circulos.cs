@@ -6,7 +6,7 @@ namespace Algoritmos_Graficacion
 {
     internal class CBresenham_Circulos
     {
-        // Implementación de Bresenham (algoritmo entero para círculos).
+        // Implementación de Bresenham (algoritmo entero para círculos). para borrar
         // Dibuja los 8 puntos simétricos por iteración usando sólo operaciones enteras.
         public void DrawCircleBresenham(Graphics g, Point center, int r, Color color)
         {

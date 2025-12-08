@@ -13,7 +13,7 @@ namespace Algoritmos_Graficacion
         {
             InitializeComponent();
             this.Text = "Círculo Paramétrico (Sin Octantes)";
-            chkOctantes.Enabled = false; // Deshabilitar octantes porque este algoritmo no los usa
+            chkOctantes.Enabled = false; 
             chkOctantes.Text = "No aplica Octantes";
 
             btnDraw.Click += BtnDraw_Click;
@@ -70,7 +70,7 @@ namespace Algoritmos_Graficacion
                 pictureBox1.Refresh();
 
                 // --- ALGORITMO PARAMÉTRICO ---
-                // Aquí verás que se dibuja pixel a pixel dando la vuelta, NO 8 a la vez
+                // Aquí se dibuja pixel a pixel dando la vuelta, NO 8 a la vez
                 using (Brush brush = new SolidBrush(Color.LimeGreen))
                 {
                     foreach (Point p in _algoritmo.Calcular(xc, yc, r))
@@ -88,6 +88,11 @@ namespace Algoritmos_Graficacion
                     }
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

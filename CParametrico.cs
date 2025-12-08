@@ -6,7 +6,7 @@ namespace Algoritmos_Graficacion
 {
     internal class CParametrico
     {
-        // Dibuja un círculo usando la forma paramétrica:
+        // Dibuja un círculo usando la forma paramétrica: para borrar
         // x = xc + r * cos(t), y = yc + r * sin(t)
         // El radio se interpreta en píxeles (ya escalado por el formulario).
         public void DrawCircleParametric(Graphics g, Point center, int r, Color color)

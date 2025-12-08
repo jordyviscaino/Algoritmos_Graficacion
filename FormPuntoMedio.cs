@@ -107,5 +107,10 @@ namespace Algoritmos_Graficacion
                 g.DrawLine(p, cx - 1000, cy + 1000, cx + 1000, cy - 1000);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

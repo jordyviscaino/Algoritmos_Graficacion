@@ -6,7 +6,6 @@ using System.Windows.Forms;
 
 namespace Algoritmos_Graficacion
 {
-    // NOTA: Copiar el Designer de FormCohenSutherland y cambiar el nombre de la clase parcial.
     public partial class FormLiangBarsky : Form
     {
         private CLiangBarsky _algoritmo = new CLiangBarsky();
@@ -82,7 +81,7 @@ namespace Algoritmos_Graficacion
             {
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
 
-                // 1. Mostrar estado inicial (Línea infinita conceptual)
+                // 1. Mostrar estado inicial 
                 g.Clear(Color.Black);
                 DibujarViewport(g, rect);
 
@@ -126,6 +125,11 @@ namespace Algoritmos_Graficacion
         {
             using (Pen p = new Pen(Color.White, 2)) g.DrawRectangle(p, r);
             g.DrawString("Viewport", this.Font, Brushes.LightGray, r.Left, r.Top - 15);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

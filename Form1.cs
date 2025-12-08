@@ -67,5 +67,27 @@ namespace Algoritmos_Graficacion
             FormSutherlandHodgman formSutherlandHodgman = new FormSutherlandHodgman();
             formSutherlandHodgman.Show();
         }
+
+        private void sutherlandTrainguloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSutherlandTriangulo formSutherlandTriangulo = new FormSutherlandTriangulo();
+            formSutherlandTriangulo.Show();
+        }
+
+        private void liangBarskyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormLiangBarskyPoligono formLiangBarskyPoligono = new FormLiangBarskyPoligono();
+            formLiangBarskyPoligono.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

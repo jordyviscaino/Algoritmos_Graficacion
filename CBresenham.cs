@@ -7,7 +7,7 @@ namespace Algoritmos_Graficacion
 {
     internal class CBresenham2
     {
-        /// <summary>
+        /// <summary> para borrar
         /// Generador de puntos para el algoritmo de Bresenham (línea) — usa solo enteros.
         /// Produce cada punto en el orden en que se dibujaría.
         /// </summary>
