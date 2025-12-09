@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Ingrese punto inicial (x1, y1) y punto 
+final (x2, y2) en valores positivos.
+
+Este algoritmo determina que pixel 
+es el más cercano usando solo 
+aritmética de enteros y basado en
+ la ecuación implícita de la recta.  
+
+</value>
+  </data>
 </root>

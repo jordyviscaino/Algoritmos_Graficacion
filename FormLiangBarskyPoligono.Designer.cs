@@ -43,6 +43,9 @@
             lblEstado = new Label();
             colorDialog1 = new ColorDialog();
             label1 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label2 = new Label();
             groupBoxDibujo.SuspendLayout();
             groupBoxRecorte.SuspendLayout();
             groupBoxRelleno.SuspendLayout();
@@ -304,7 +307,7 @@
             pictureBox1.BackColor = Color.Black;
             pictureBox1.Location = new Point(12, 140);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1369, 410);
+            pictureBox1.Size = new Size(991, 410);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -328,11 +331,45 @@
             label1.TabIndex = 6;
             label1.Text = resources.GetString("label1.Text");
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1028, 285);
+            label5.Name = "label5";
+            label5.Size = new Size(332, 140);
+            label5.TabIndex = 15;
+            label5.Text = resources.GetString("label5.Text");
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(1050, 195);
+            label6.Name = "label6";
+            label6.Size = new Size(201, 50);
+            label6.TabIndex = 14;
+            label6.Text = "Recorte Liang-Barsky\r\n (Polígonos)";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.LemonChiffon;
+            label2.Location = new Point(1028, 445);
+            label2.Name = "label2";
+            label2.Size = new Size(277, 105);
+            label2.TabIndex = 19;
+            label2.Text = resources.GetString("label2.Text");
+            // 
             // FormLiangBarskyPoligono
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LavenderBlush;
             ClientSize = new Size(1393, 561);
+            Controls.Add(label2);
+            Controls.Add(label5);
+            Controls.Add(label6);
             Controls.Add(label1);
             Controls.Add(lblEstado);
             Controls.Add(pictureBox1);
@@ -388,5 +425,8 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private Label label1;
+        private Label label5;
+        private Label label6;
+        private Label label2;
     }
 }

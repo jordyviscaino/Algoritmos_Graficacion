@@ -27,7 +27,7 @@ namespace Algoritmos_Graficacion
             numPixelSize.Value = 20;
             numSpeed.Value = 20;
 
-   
+
             txtX.Text = "5";
             txtY.Text = "2";
             txtW.Text = "25";
@@ -285,6 +285,11 @@ namespace Algoritmos_Graficacion
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

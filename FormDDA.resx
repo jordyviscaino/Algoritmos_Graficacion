@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Ingrese coordenadas enteras 
+para P1 y P2.
+
+El DDA elimina la multiplicación
+ del bucle. Calcula la línea sumando
+incrementos constantes (dx, dy) basados
+en la diferencia de coordenadas. Es más 
+rápido que el básico, pero acumula error
+de precisión flotante en líneas largas.</value>
+  </data>
 </root>

@@ -14,6 +14,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPuntoMedio));
             groupBox1 = new GroupBox();
             label3 = new Label();
             label2 = new Label();
@@ -32,6 +33,8 @@
             btnClear = new Button();
             btnDraw = new Button();
             pictureBox1 = new PictureBox();
+            label5 = new Label();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numPixelSize).BeginInit();
@@ -222,12 +225,34 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(682, 165);
+            label5.Name = "label5";
+            label5.Size = new Size(323, 140);
+            label5.TabIndex = 11;
+            label5.Text = resources.GetString("label5.Text");
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(708, 54);
+            label6.Name = "label6";
+            label6.Size = new Size(257, 50);
+            label6.TabIndex = 10;
+            label6.Text = "Algoritmo de Punto Medio \r\n(Midpoint)";
+            // 
             // FormPuntoMedio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
-            ClientSize = new Size(696, 450);
+            ClientSize = new Size(997, 450);
+            Controls.Add(label5);
+            Controls.Add(label6);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -242,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -264,5 +290,7 @@
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Label lblPixel;
         private System.Windows.Forms.NumericUpDown numPixelSize;
+        private Label label5;
+        private Label label6;
     }
 }

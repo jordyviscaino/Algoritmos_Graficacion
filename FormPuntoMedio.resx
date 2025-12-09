@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Defina Centro y Radio. Observe la simetría.
+
+Evalúa la función del círculo en el punto medio
+entre dos píxeles candidatos para decidir cuál
+iluminar. Es matemáticamente robusto y muy
+eficiente al evitar operaciones de raíz cuadrada
+y usar solo enteros.</value>
+  </data>
 </root>

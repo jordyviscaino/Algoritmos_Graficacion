@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Defina Centro y Radio. Pulse Animar.
+
+Dibuja el círculo recorriendo el ángulo
+theta de 0 a 360 grados usando Seno
+y Coseno. No utiliza simetría de octantes,
+por lo que es lento y puede dejar huecos
+si el paso angular no se ajusta 
+correctamente al radio.</value>
+  </data>
 </root>

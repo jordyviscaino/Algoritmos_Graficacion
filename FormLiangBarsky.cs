@@ -131,5 +131,10 @@ namespace Algoritmos_Graficacion
         {
 
         }
+
+        private void FormLiangBarsky_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

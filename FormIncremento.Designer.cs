@@ -14,6 +14,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIncremento));
             groupBox1 = new GroupBox();
             label4 = new Label();
             label3 = new Label();
@@ -33,6 +34,8 @@
             btnClear = new Button();
             btnDraw = new Button();
             pictureBox1 = new PictureBox();
+            label6 = new Label();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numPixelSize).BeginInit();
@@ -231,12 +234,35 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(682, 32);
+            label6.Name = "label6";
+            label6.Size = new Size(219, 50);
+            label6.TabIndex = 5;
+            label6.Text = "Algoritmo Incremental \r\n(Ecuación Explícita)";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(682, 133);
+            label5.Name = "label5";
+            label5.Size = new Size(248, 220);
+            label5.TabIndex = 6;
+            label5.Text = resources.GetString("label5.Text");
+            label5.Click += label5_Click;
+            // 
             // FormIncremento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
-            ClientSize = new Size(688, 449);
+            ClientSize = new Size(937, 449);
+            Controls.Add(label5);
+            Controls.Add(label6);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -251,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -274,5 +301,7 @@
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Label lblPixel;
         private System.Windows.Forms.NumericUpDown numPixelSize;
+        private Label label6;
+        private Label label5;
     }
 }

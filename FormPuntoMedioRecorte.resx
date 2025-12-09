@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Defina Línea y Ventana. Pulse Recortar.
+Aplica una búsqueda binaria para encontrar el borde. Si un 
+punto está fuera, divide la línea a la mitad repetidamente
+hasta converger en la intersección con precisión de píxel, sin usar
+fórmulas algebraicas de pendiente.</value>
+  </data>
 </root>

@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Ingrese P1(x,y) y P2(x,y) y
+pulse Dibujar.
+
+Este algoritmo básico calcula la 
+pendiente (m) 
+y utiliza la ecuación 'y = mx + b'. Es 
+intuitivo pero ineficiente
+ computacionalmente
+debido al uso de multiplicaciones y 
+redondeo de decimales en cada
+paso.</value>
+  </data>
 </root>

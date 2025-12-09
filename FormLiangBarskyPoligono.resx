@@ -128,4 +128,22 @@
 5. Selecciona un punto dentro de tu poligono y observa la magia :D.
 </value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Dibuje polígono y observe el recorte.
+
+Aplica el análisis paramétrico a cada arista
+del polígono de forma individual. Calcula los
+parámetros t de entrada y salida para reconstruir
+la conectividad de la figura de manera eficiente
+y compacta.</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Algoritmos de Relleno (Filling)
+Seleccione un modo y haga clic dentro de la figura.
+
+- Flood Fill (4/8): Expande el color desde una 
+  semilla buscando vecinos conectados (Recursivo).
+- Scanline: Barre la imagen línea por línea 
+  calculando intersecciones (Geometría).</value>
+  </data>
 </root>

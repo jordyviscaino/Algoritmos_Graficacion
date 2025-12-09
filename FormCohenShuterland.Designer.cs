@@ -14,6 +14,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCohenSutherland));
             groupBoxLine = new GroupBox();
             label4 = new Label();
             label3 = new Label();
@@ -40,6 +41,8 @@
             btnClear = new Button();
             btnRecortar = new Button();
             pictureBox1 = new PictureBox();
+            label9 = new Label();
+            label10 = new Label();
             groupBoxLine.SuspendLayout();
             groupBoxWindow.SuspendLayout();
             groupBoxControls.SuspendLayout();
@@ -57,7 +60,7 @@
             groupBoxLine.Controls.Add(txtX2);
             groupBoxLine.Controls.Add(txtY1);
             groupBoxLine.Controls.Add(txtX1);
-            groupBoxLine.Location = new Point(12, 12);
+            groupBoxLine.Location = new Point(14, 126);
             groupBoxLine.Name = "groupBoxLine";
             groupBoxLine.Size = new Size(200, 130);
             groupBoxLine.TabIndex = 0;
@@ -138,7 +141,7 @@
             groupBoxWindow.Controls.Add(txtW);
             groupBoxWindow.Controls.Add(txtYMin);
             groupBoxWindow.Controls.Add(txtXMin);
-            groupBoxWindow.Location = new Point(220, 12);
+            groupBoxWindow.Location = new Point(222, 126);
             groupBoxWindow.Name = "groupBoxWindow";
             groupBoxWindow.Size = new Size(200, 130);
             groupBoxWindow.TabIndex = 1;
@@ -221,7 +224,7 @@
             groupBoxControls.Controls.Add(btnSalir);
             groupBoxControls.Controls.Add(btnClear);
             groupBoxControls.Controls.Add(btnRecortar);
-            groupBoxControls.Location = new Point(430, 12);
+            groupBoxControls.Location = new Point(432, 126);
             groupBoxControls.Name = "groupBoxControls";
             groupBoxControls.Size = new Size(350, 130);
             groupBoxControls.TabIndex = 2;
@@ -289,16 +292,39 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Black;
-            pictureBox1.Location = new Point(12, 150);
+            pictureBox1.Location = new Point(12, 284);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(770, 400);
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(270, 24);
+            label9.Name = "label9";
+            label9.Size = new Size(553, 80);
+            label9.TabIndex = 13;
+            label9.Text = resources.GetString("label9.Text");
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(22, 36);
+            label10.Name = "label10";
+            label10.Size = new Size(253, 50);
+            label10.TabIndex = 12;
+            label10.Text = "Recorte Cohen-Sutherland \r\n(Regiones)";
+            // 
             // FormCohenSutherland
             // 
-            ClientSize = new Size(800, 570);
+            BackColor = Color.LightCyan;
+            ClientSize = new Size(822, 696);
+            Controls.Add(label9);
+            Controls.Add(label10);
             Controls.Add(pictureBox1);
             Controls.Add(groupBoxControls);
             Controls.Add(groupBoxWindow);
@@ -315,6 +341,7 @@
             ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -337,5 +364,7 @@
         private System.Windows.Forms.Button btnSalir; private System.Windows.Forms.Button btnClear; private System.Windows.Forms.Button btnRecortar;
         private System.Windows.Forms.NumericUpDown numSpeed; private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Label lblMsg;
+        private Label label9;
+        private Label label10;
     }
 }

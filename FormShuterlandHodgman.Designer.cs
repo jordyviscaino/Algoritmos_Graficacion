@@ -43,6 +43,9 @@
             lblEstado = new Label();
             colorDialog1 = new ColorDialog();
             label1 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label2 = new Label();
             groupBoxDibujo.SuspendLayout();
             groupBoxRecorte.SuspendLayout();
             groupBoxRelleno.SuspendLayout();
@@ -295,7 +298,7 @@
             pictureBox1.BackColor = Color.Black;
             pictureBox1.Location = new Point(12, 140);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1273, 764);
+            pictureBox1.Size = new Size(1143, 764);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -319,9 +322,44 @@
             label1.Text = resources.GetString("label1.Text");
             label1.Click += label1_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1161, 278);
+            label5.Name = "label5";
+            label5.Size = new Size(344, 140);
+            label5.TabIndex = 13;
+            label5.Text = resources.GetString("label5.Text");
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(1183, 188);
+            label6.Name = "label6";
+            label6.Size = new Size(286, 50);
+            label6.TabIndex = 12;
+            label6.Text = "Recorte Sutherland-Hodgman \r\n(Rectangular)";
+            label6.Click += label6_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.LemonChiffon;
+            label2.Location = new Point(1161, 453);
+            label2.Name = "label2";
+            label2.Size = new Size(277, 105);
+            label2.TabIndex = 19;
+            label2.Text = resources.GetString("label2.Text");
+            // 
             // FormSutherlandHodgman
             // 
+            BackColor = Color.LavenderBlush;
             ClientSize = new Size(1502, 916);
+            Controls.Add(label2);
+            Controls.Add(label5);
+            Controls.Add(label6);
             Controls.Add(label1);
             Controls.Add(lblEstado);
             Controls.Add(pictureBox1);
@@ -375,5 +413,8 @@
         private System.Windows.Forms.NumericUpDown numPixelSize;
         private System.Windows.Forms.Label lblPixel;
         private Label label1;
+        private Label label5;
+        private Label label6;
+        private Label label2;
     }
 }

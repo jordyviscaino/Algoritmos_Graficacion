@@ -127,4 +127,22 @@
 4. Selecciona un color y da click en rellenar.
 5. Selecciona un punto dentro de tu poligono y observa la magia :D.</value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Dibuje polígono, defina ventana y recorte.
+
+Procesa el polígono como una tubería (pipeline).
+Recorta todos los vértices contra un borde de la
+ventana a la vez (Izq-&gt;Arr-&gt;Der-&gt;Abj), pasando el
+polígono resultante a la siguiente etapa.
+Ideal para polígonos convexos.</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Algoritmos de Relleno (Filling)
+Seleccione un modo y haga clic dentro de la figura.
+
+- Flood Fill (4/8): Expande el color desde una 
+  semilla buscando vecinos conectados (Recursivo).
+- Scanline: Barre la imagen línea por línea 
+  calculando intersecciones (Geometría).</value>
+  </data>
 </root>

@@ -14,6 +14,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBresenham));
             groupBox1 = new GroupBox();
             label4 = new Label();
             label3 = new Label();
@@ -33,6 +34,8 @@
             btnClear = new Button();
             btnDraw = new Button();
             pictureBox1 = new PictureBox();
+            label5 = new Label();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numPixelSize).BeginInit();
@@ -220,6 +223,7 @@
             btnDraw.TabIndex = 0;
             btnDraw.Text = "Animar";
             btnDraw.UseVisualStyleBackColor = false;
+            btnDraw.Click += btnDraw_Click_1;
             // 
             // pictureBox1
             // 
@@ -231,12 +235,34 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(690, 33);
+            label5.Name = "label5";
+            label5.Size = new Size(238, 50);
+            label5.TabIndex = 3;
+            label5.Text = "Algoritmo de Bresenham \r\npara trazado de líneas";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(690, 133);
+            label6.Name = "label6";
+            label6.Size = new Size(252, 160);
+            label6.TabIndex = 4;
+            label6.Text = resources.GetString("label6.Text");
+            // 
             // FormBresenham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
-            ClientSize = new Size(688, 449);
+            ClientSize = new Size(940, 449);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -251,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)numSpeed).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -275,5 +302,7 @@
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Label lblPixel;
         private System.Windows.Forms.NumericUpDown numPixelSize;
+        private Label label5;
+        private Label label6;
     }
 }

@@ -139,5 +139,10 @@ namespace Algoritmos_Graficacion
         {
 
         }
+
+        private void btnDraw_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

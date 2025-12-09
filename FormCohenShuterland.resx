@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Defina Línea y Ventana. Pulse Recortar.
+Divide el plano en 9 regiones asignando códigos binarios (Arriba, Abajo, Der, Izq).
+Descarta rápidamente líneas lejanas y recorta las que cruzan calculando 
+intersecciones geométricas con los bordes de la ventana.</value>
+  </data>
 </root>
